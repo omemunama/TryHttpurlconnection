@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //localhost or 127.0.0.1 , is refer to emulator device it self
                 //use 10.0.2.2, for access local server
-                new ApiConnect().execute("http://10.0.2.2:3000/api/v1/auth");
+                new ApiConnect().execute("http://private-3132d-tryhttpurlconnection.apiary-mock.com/users");
             }
         });
     }
@@ -96,18 +96,9 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < users.length(); i++) {
                 JSONObject user = users.getJSONObject(i);
                 lbl_http_connection.append(
-                        "Id = " + String.valueOf(user.getInt("id")) +
+                                "id : "+String.valueOf(user.getInt("id")) +
                                 System.getProperty("line.separator") +
-                                "Email = " + user.getString("email") +
-                                System.getProperty("line.separator") +
-                                "Password = " + user.getString("password") +
-                                System.getProperty("line.separator") +
-                                "Token Auth = " + user.getString("token_auth") +
-                                System.getProperty("line.separator") +
-                                "Created at = " + user.getString("created_at") +
-                                System.getProperty("line.separator") +
-                                "Updated at = " + user.getString("updated_at") +
-                                System.getProperty("line.separator") +
+                                "email : "+user.getString("email") +
                                 System.getProperty("line.separator")
                 );
             }
@@ -138,5 +129,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 
 }
