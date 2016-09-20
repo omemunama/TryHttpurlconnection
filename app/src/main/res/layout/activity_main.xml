@@ -9,8 +9,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nursulaeman.tryhttpurlconnection.MainActivity">
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="http connection"
+        android:id="@+id/btn_request" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/lbl_http_connection"
+        android:layout_below="@+id/btn_request"
+        android:layout_marginTop="24dp"/>
+
 </RelativeLayout>
